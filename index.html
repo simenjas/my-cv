@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header">
+        <div class="col-md-8 offset-md-2 d-flex">
+            <img src="images/photo.jpeg" height="300" width="300">
+            <div class="ml-5 mb-5">
+                <h2>Jasment</h2>
+                <h2>Simanjutak</h2>
+                <h3 style="background: #404040; width: fit-content;" class="p-1 mb-5">Student</h3>
+                
+                <div class="d-flex">
+                    <div class="mr-5">
+                        <div class="mb-5">
+                            <h4>Phone</h4>
+                            <p> <i class="fas fa-phone"></i> +62 821-6092-4058</p>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p> <i class="far fa-envelope"></i> jasmensimanjuntak586@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="align-self-center">
+                        <div>
+                            <h4>Address</h4>
+                            <p>Pematang Siantar, Sumatra Utara</p>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="col-md-8 offset-md-2 d-flex" style="height: 600px;">
+            <div id="side" class="col-md-3">
+                <div class="col col-md-10 offset-md-1">
+                    <div class="mb-5">
+                        <h3>Education</h3>
+                        
+                        <div class="education mt-4">
+                            <p>2004 - 2010</p>
+                            <p>SD N 173539 hutagaol</p>
+                        </div>
+    
+                        <div class="education mt-4">
+                            <p>2004 - 2010</p>
+                            <p>SD N 173539 hutagaol</p>
+                        </div>
+    
+                        <div class="education mt-4">
+                            <p>2004 - 2010</p>
+                            <p>SD N 173539 hutagaol</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-3">Hobbies</h3>
+
+                        <ul class="hobbies">
+                            <li> <div class="dot mr-2"></div> Badminton</li>
+                            <li> <div class="dot mr-2"></div> Volly</li>
+                            <li> <div class="dot mr-2"></div> Reading</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main" class="col-md-9">
+                <div class="mb-5">
+                    <h3>About</h3>
+                    <p>Saya memiliki kemampuan menjalankan Microsoft word, Microsoft Excel, Microsoft Power Point, Photoshop dengan baik. Selain menguasai dalam komputer saya juga disiplin dalam waktu dna mampu bekerja sama dengan rekan kerja dengan baik</p>
+                </div>
+
+                <div class="mb-5">
+                    <h3>Experience</h3>
+                    <p>None</p>
+                </div>
+
+                <div>
+                    <h3 class="mb-5">Skills</h3>
+
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="skill" data-point="2">
+                                <p>Microsoft Excel</p>
+                                <div class="list-dot">
+
+                                </div>
+                            </div>
+                            <div class="skill" data-point="1">
+                                <p>Microsott Word </p>
+                                <div class="list-dot">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skill" data-point="4">
+                                <p>Microsoft Point</p>
+                                <div class="list-dot">
+
+                                </div>
+                            </div>
+                            <div class="skill" data-point="5">
+                                <p>Photoshop</p>
+                                <div class="list-dot">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="inner-width">
+          <div class="copyright">
+            &copy; 2021 | Designed By <a href="https://www.freepik.com/">oxura</a>
+          </div>
+          <div class="sm">
+            <a href="https://web.facebook.com/darkcode0/" class="fab fa-facebook-f"></a>
+            <a href="https://www.youtube.com/channel/UCD3KVjbb7aq2OiOffuungzw" class="fab fa-youtube"></a>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        let collection = document.getElementsByClassName('skill');
+        let dotCollection = document.getElementsByClassName('list-dot')
+        Array.from(collection).forEach((v, i) => {
+            let full = collection[i].getAttribute('data-point');
+            for(let j = 1; j <= 5; j++) {
+                let background = 'white';
+                if(j <= full) {
+                    background = 'black'
+                }
+                dotCollection[i].innerHTML = `${dotCollection[i].innerHTML} <div class="dot" style="background: ${background};"></div>`
+            }
+        })
+    </script>
+</body>
+</html>
